@@ -1,0 +1,71 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background: #f0f4f8;
+}
+
+/* transition */
+.fancy-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #041b05;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+
+
+
+/* Hover over effect */
+.fancy-btn:hover {
+  transform: scale(1.1);
+  background: #05850b;
+}
+
+
+
+
+/* Keyframe animation */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: rgb(54, 11, 3);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+/*  Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content with animation */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
